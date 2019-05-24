@@ -33,11 +33,11 @@ class Pila:
             (print("Ocurrio un error al sacar un elemento de una pila vacia.",
                    str(type(e)), e.message()))
         except ZeroDivisionError as d:
-                print("Ocurrio un error al dividir.")
-            else:
-                print("Resultado")
-            finally:
-                print("Finally")
+            print("Ocurrio un error al dividir.")
+        else:
+            print("Resultado")
+        finally:
+            print("Finally")
 class MiGatito(Exception):
     def __init__(self, message):
         self.message = message
