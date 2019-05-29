@@ -1,0 +1,28 @@
+class comparacion(object):
+	def __init__ (self):
+		pass
+	def simple_pila(self,num,n):
+		if isinstance(num,int) and isinstance (n,int):
+			return self.simple_pila_aux(num,n-1)
+	def simple_pila_aux(self,num,n):
+		if n == 0:
+			return 0
+		else: return (num*n)+ self.simple_pila_aux(num, n-1)
+	#recursion de cola
+	def simple_cola(self,num,n):
+		if isinstance (num,int) and isinstance (n,int):
+			return self.simple_cola_aux(num,n+1,0)
+	def simple_cola_aux(self,num,n,resultado):
+		if n == 0:
+			return resultado
+		else: return self.simple_cola_aux(num,n-1,resultado)
+	def iteracionwhile(self,num,n):
+		resultado = 0
+		while n>0:
+			resultado +=(num*n)
+			n-=1
+	def iteraccionfor(self,num,n):
+		resultado = 0
+		for i in range(n):
+			resultado += (num*(i+1))
+			print(num*(i+1))
